@@ -40,7 +40,7 @@ GenerateData<br>
 
 
 GenerateRules<br>
-&emsp; &emsp;•	Creates rule to detect for motion for each of the tag sensors in the Sensor Data table, and inserts it into  &emsp; &emsp; the  Rules table for testing purposes.<br>
+&emsp; &emsp;•	Creates rule to detect for motion for each of the tag sensors in the Sensor Data table, and inserts it into the  Rules table for testing purposes.<br>
 
 GenerateAlerts<br>
 &emsp; &emsp;•	Creates duplicate alert for each of the alerts in the Alerts table for testing purposes.<br>
