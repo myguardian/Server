@@ -27,7 +27,7 @@ Alerts Table<br>
 
 GetAlerts API<br>
 &emsp; &emsp;•	Take Flowerpot ID from URL<br>
-&emsp; &emsp;•	Get all associated alerts from database for the Flowerpot ID given that the alert was not previously  &emsp; &emsp;acknowledged<br>
+&emsp; &emsp;•	Get all associated alerts from database for the Flowerpot ID given that the alert was not previously acknowledged<br>
 &emsp; &emsp;•	Convert alerts into a JSON object that contains an array of JSON objects<br>
 &emsp; &emsp;•	Echo alerts JSON object to screen<br>
 
@@ -40,7 +40,7 @@ GenerateData<br>
 
 
 GenerateRules<br>
-&emsp; &emsp;•	Creates rule to detect for motion for each of the tag sensors in the Sensor Data table, and inserts it into the &emsp; &emsp; Rules table for testing purposes.<br>
+&emsp; &emsp;•	Creates rule to detect for motion for each of the tag sensors in the Sensor Data table, and inserts it into  &emsp; &emsp; the  Rules table for testing purposes.<br>
 
 GenerateAlerts<br>
 &emsp; &emsp;•	Creates duplicate alert for each of the alerts in the Alerts table for testing purposes.<br>
