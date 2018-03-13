@@ -1,6 +1,6 @@
 # Server
 
-Live Server: https://hanifso.dev.fast.sheridanc.on.ca/Pi/ /n
+Live Server: https://hanifso.dev.fast.sheridanc.on.ca/Pi/
 
 Sensor Cloud <br>
 •	Collect data from tag sensors <br>
