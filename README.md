@@ -3,8 +3,8 @@
 Live Server: https://hanifso.dev.fast.sheridanc.on.ca/Pi/
 
 Sensor Cloud <br>
-&emsp; •	Collect data from tag sensors <br>
-•	Call InsertSensorData API when information is received <br>
+    •	Collect data from tag sensors <br>
+&emsp; &emsp;•	Call InsertSensorData API when information is received <br>
 
 InsertSensorData API <br>
 •	Receives raw data with Tag ID, Flowerpot ID = Tag Manager Serial Number, Timestamp, and if Motion was detected.  <br>
