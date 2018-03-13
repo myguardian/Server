@@ -2,8 +2,8 @@
 
 Live Server: https://hanifso.dev.fast.sheridanc.on.ca/Pi/
 
-Sensor Cloud
-•	Collect data from tag sensors <br>
+Sensor Cloud <br>
+&emsp; •	Collect data from tag sensors <br>
 •	Call InsertSensorData API when information is received <br>
 
 InsertSensorData API <br>
