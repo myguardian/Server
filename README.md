@@ -1,6 +1,6 @@
 # Server
 
-Sensor Cloud
+Sensor Cloud <br>
 •	Collect data from tag sensors
 •	Call InsertSensorData API when information is received
 
