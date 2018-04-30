@@ -6,17 +6,15 @@
     require 'conn.php';
     
     // Creates Select Command to get all rules
-    $sql = "SELECT * FROM `Alerts` WHERE `Alert ID` = '$alertID'";
+    $sql = "SELECT * FROM `AlertDemo` WHERE `Alert ID` = '$alertID'";
     
-    // Execute Select Command. gets every row in rules table
     $result = $conn->query($sql);
-
     
     // Loops thorugh results
     if ($result->num_rows > 0) {
        while($row = $result->fetch_assoc()) {
            $alertTime = date("Y-m-d H:i:s",time());
-           $sql = "UPDATE `Alerts` SET `Acknowledged Timestamp`='$alertTime'  WHERE `Alert ID` = '$alertID'";
+           $sql = "UPDATE `AlertDemo` SET `Acknowledged Timestamp`='$alertTime'  WHERE `Alert ID` = '$alertID'";
            $conn->query($sql);
             echo "Acknowledged Alert";
        }

@@ -1,7 +1,6 @@
 <?php
 for($i=0;$i<1000;$i++){
     $tagName = str_pad(rand(0,99), 3, '0', STR_PAD_LEFT) . substr(str_shuffle(str_repeat("0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ", 5)), 0, 12);;
-    $motion = rand(0,1);
     $timeStamp = date("Y-m-d H:i:s", time());
     
     // First three characters in tagName = tagID, after = tagManagerSerial
@@ -13,7 +12,7 @@ for($i=0;$i<1000;$i++){
     require 'conn.php';
 
     // Insert into table
-    $sql = "INSERT INTO `Sensor Data`(`Flowerpot ID`, `Tag ID`, `Timestamp`, `Motion`) VALUES ('$FlowerpotID', '$tagName', '$timeStamp', '$motion')";
+    $sql = "INSERT INTO `Sensor Data`(`Flowerpot ID`, `Tag ID`, `Timestamp`) VALUES ('$FlowerpotID', '$tagName', '$timeStamp')";
 
     // Checks if insertion was successful
     if ($conn->query($sql) === TRUE) {

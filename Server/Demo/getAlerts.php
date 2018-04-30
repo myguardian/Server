@@ -1,32 +1,35 @@
 <?php
-    // Get Alert ID from url parameters
-    $alertID = $_GET["alertID"];
+    // Get Flowerpot ID from url parameters
+    $flowerpotID = "79B41758C";
     
     // Imports script to establish conenction to database. Creates $conn variable    
     require 'conn.php';
     
     // Creates Select Command to get all rules
-    $sql = "SELECT * FROM `Alerts` WHERE `Alert ID` = '$alertID'";
+    $sql = "SELECT * FROM `AlertDemo` WHERE `Flowerpot ID` = '$flowerpotID' AND `Acknowledged Timestamp` = '0000-00-00 00:00:00'";
     
     // Execute Select Command. gets every row in rules table
     $result = $conn->query($sql);
 
+    $alertsArray = array();
     
     // Loops thorugh results
     if ($result->num_rows > 0) {
        while($row = $result->fetch_assoc()) {
-           $alertTime = date("Y-m-d H:i:s",time());
-           $sql = "UPDATE `Alerts` SET `Acknowledged Timestamp`='$alertTime'  WHERE `Alert ID` = '$alertID'";
-           $conn->query($sql);
-            echo "Acknowledged Alert";
+           $alertsArray[] = $row;
        }
     } else {
-        echo "Alert not found";
+        echo "No Alerts";
     }
 
 
     // Close connection
     $conn->close();
+    
+    $alertsJSON = json_encode(array('Alerts' => $alertsArray));
+    
+    // Print object containing array on screen
+	echo $alertsJSON;
 ?>
 
 

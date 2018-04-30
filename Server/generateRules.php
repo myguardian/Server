@@ -3,7 +3,7 @@
     require 'conn.php';
     
     // Creates Select Command
-    $sql = "SELECT `Flowerpot ID`, `Tag ID`, `Timestamp`, `Acknowledge Time`, `Motion` FROM `Sensor Data` WHERE 1";
+    $sql = "SELECT `Flowerpot ID`, `Tag ID`, `Timestamp`, `Acknowledge Time` FROM `Sensor Data` WHERE 1";
     
     // Execute Select Command
     $result = $conn->query($sql);
@@ -14,11 +14,9 @@
        while($row = $result->fetch_assoc()) {
            $tagID = $row["Tag ID"];
            $flowerpotID = $row["Flowerpot ID"];
-
            echo "New rule added successfully". "<br>";
-
-           $sql = "INSERT INTO `Rules`(`Tag ID`, `Flowerpot ID`, `Rule Number`) VALUES ('$tagID', '$flowerpotID', '1')";
-           $conn->query($sql);
+           $sql2 = "INSERT INTO `Rules`(`Tag ID`, `Flowerpot ID`, `Rule`) VALUES ('$tagID', '$flowerpotID', 'Garage Open')";
+           $conn->query($sql2);
        }
     } else {
         echo "No new tag sensors";

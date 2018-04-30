@@ -1,9 +1,11 @@
 <?php
     // Get Flowerpot ID from url parameters
-    $flowerpotID = $_GET["flowerpotID"];
+    $flowerpotID = "79B41758C";
     
     // Imports script to establish conenction to database. Creates $conn variable    
+    require 'RuleEngine.php';
     require 'conn.php';
+    
     
     // Creates Select Command to get all rules
     $sql = "SELECT * FROM `Alerts` WHERE `Flowerpot ID` = '$flowerpotID' AND `Acknowledged Timestamp` = '0000-00-00 00:00:00'";
@@ -37,6 +39,7 @@
 	fwrite($fp, $alertsJSON);
 	// Close the file
 	fclose($fp);
+	
 ?>
 
 
